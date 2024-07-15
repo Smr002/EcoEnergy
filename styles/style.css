@@ -1,0 +1,647 @@
+body, html {
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    box-sizing: border-box;
+}
+header {
+    width: 95%;
+    background: #064f45;
+    padding: 20px 12px;
+    position: fixed;
+    top: 10px;
+    left: 2.5%;
+    right: 2.5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    z-index: 1000;
+    border-radius: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.logo img {
+    height: 110px;
+}
+
+.nav-links {
+    list-style: none;
+    display: inline-flex;
+    justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links li {
+    margin: 0 15px;
+}
+
+.nav-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    padding: 8px 12px;
+    border-radius: 4px;
+    transition: background 0.3s ease, transform 0.3s ease;
+}
+
+.nav-links a:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+}
+
+.nav-links li {
+    position: relative;
+}
+
+.nav-links .dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    min-width: 160px;
+    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+    z-index: 1;
+}
+
+.nav-links .dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.nav-links .dropdown-content a:hover {
+    background-color: #369488;
+}
+
+.nav-links .dropdown:hover .dropdown-content {
+    display: block;
+}
+
+.hamburger {
+    display: none;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.hamburger .bar {
+    width: 25px;
+    height: 3px;
+    background-color: #fff;
+    margin: 5px 0;
+    transition: transform 0.3s ease-in-out;
+}
+
+.hamburger.active .bar:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+}
+
+.hamburger.active .bar:nth-child(2) {
+    opacity: 0;
+}
+
+.hamburger.active .bar:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+}
+
+.hero-section {
+    position: relative;
+    background: url('../image/homeImg.jpg') no-repeat center center/cover;
+    height: 81vh;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+
+.hero-content {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-content h1 {
+    font-size: 48px;
+    margin: 0;
+}
+
+.hero-content p {
+    font-size: 24px;
+    margin: 10px 0;
+}
+
+.hero-content .btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background: #4CAF50;
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    border-radius: 4px;
+    transition: background 0.3s ease;
+}
+
+.hero-content .btn:hover {
+    background: #45a049;
+}
+
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.4);
+    z-index: 1;
+}
+
+.arrow-left, .arrow-right {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(0, 0, 0, 0.5);
+    color: white;
+    border: none;
+    font-size: 24px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 50%;
+    z-index: 2;
+}
+
+.arrow-left {
+    left: 20px;
+}
+
+.arrow-right {
+    right: 20px;
+}
+
+.section-title {
+    text-align: center;
+    padding: 50px 0;
+}
+.section-title h1 {
+    background: #f1f1f1;
+    display: inline-block;
+    padding: 10px 20px;
+    color: #064f45;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.4);
+}
+.cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0 20px;
+}
+.card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    padding: 20px;
+    width: 300px;
+    transition: transform 0.3s ease;
+}
+.card:hover {
+    transform: translateY(-10px);
+}
+.card img {
+    width: 100%;
+    border-radius: 10px;
+}
+.card h3 {
+    margin: 20px 0 10px;
+}
+.card p {
+    color: #666;
+    margin: 10px 0;
+}
+.card .underline {
+    width: 50px;
+    height: 3px;
+    background: #32CD32;
+    margin: 10px auto;
+}
+
+.cardP{
+    background: white;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    text-align: center;
+    padding: 20px;
+    width: 400px;
+    transition: transform 0.3s ease;
+ 
+
+}
+
+.cardP .image-project img{
+    width: 100%;
+}
+
+.latestProject{
+    position: relative;
+    background: url('../image/homeImg.jpg') no-repeat center center/cover;
+    height: 86vh;
+    box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.8);
+    z-index: -1;
+}
+
+.our-news {
+    padding: 40px 20px;
+    background-color: #f4f4f4;
+}
+
+/* General Styles for News Cards */
+.news-cards {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+    padding: 0 20px;
+}
+
+.news-card {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    width: 300px;
+    transition: transform 0.3s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+.news-card:hover {
+    transform: translateY(-10px);
+}
+
+.news-card .image-container {
+    width: 35%;
+    padding-top: 35%; 
+    position: relative;
+    overflow: hidden;
+    transform: rotate(45deg); 
+    margin: 20px auto; 
+    border: 5px solid #32CD32; 
+}
+
+.news-card .image-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: rotate(-45deg); 
+}
+
+.news-card .date {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    background: green;
+    color: white;
+    padding: 10px 15px;
+    font-size: 14px;
+}
+
+.news-card .content {
+    padding: 20px;
+    text-align: center;
+}
+
+.news-card .content h3 {
+    margin: 10px 0;
+}
+
+.news-card .content p {
+    color: #666;
+    margin: 10px 0;
+}
+
+.news-card .content .read-more {
+    display: block;
+    margin-top: 10px;
+    color: #32CD32;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.news-card .content .read-more:hover {
+    text-decoration: underline;
+}
+
+.news-card .underline {
+    width: 50px;
+    height: 3px;
+    background: #32CD32;
+    margin: 10px auto;
+}
+
+
+.footer {
+    background-color: #1a695e;
+    color: #fff;
+    padding: 40px 0;
+    position: relative;
+}
+.footer .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 20px;
+}
+.footer .container div {
+    flex: 1;
+    margin: 10px;
+}
+.footer .container .contact-info,
+.footer .container .useful-links,
+.footer .container .subscribe {
+    flex: 1;
+}
+.footer .container h2 {
+    color: #f1f1f1;
+    margin-bottom: 10px;
+}
+.footer .container p,
+.footer .container a {
+    color: #fff;
+    margin: 5px 0;
+    text-decoration: none;
+}
+.footer .container a:hover {
+    text-decoration: underline;
+}
+.footer .social-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+.footer .social-icons a {
+    background-color: white;
+    padding: 10px;
+    border-radius: 50%;
+    color: black;
+    display: inline-block;
+    text-align: center;
+}
+.footer .social-icons a:hover {
+    background-color: rgb(184, 184, 184);
+}
+.footer .subscribe input[type="email"] {
+    width: 80%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+.footer .subscribe button {
+    padding: 10px 20px;
+    border: none;
+    background-color:#f1f1f1;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    color: black;
+}
+.footer .subscribe button:hover {
+    background-color: #f1f1f1;
+}
+.footer-bottom {
+    background-color: #064f45;
+    color: #666;
+    text-align: center;
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}
+.footer-bottom a {
+    color: #f1f1f1;
+    text-decoration: none;
+}
+.footer-bottom a:hover {
+    text-decoration: underline;
+}
+
+.latest-project .about-section {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 60px 40px;
+    background: linear-gradient(135deg, #005f4a, #0a7f61);
+    color: white;
+    border-radius: 20px;
+    margin: 40px auto;
+    max-width: 1200px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    position: relative;
+    overflow: hidden;
+}
+
+.latest-project .image-container1 {
+    flex: 1;
+    border-radius: 20px 0 0 20px;
+    overflow: hidden;
+    max-width: 50%;
+    transition: transform 0.3s ease-in-out;
+}
+
+.latest-project .image-container1 img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.latest-project .text-container {
+    flex: 1;
+    padding: 40px;
+    background: rgba(0, 0, 0, 0.6);
+    border-radius: 0 20px 20px 0;
+    color: #f0f0f0;
+    position: relative;
+    z-index: 1;
+}
+
+.latest-project .text-container h3 {
+    color: #0ac775;
+    font-size: 24px;
+    margin-bottom: 10px;
+}
+
+.latest-project .text-container h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.latest-project .text-container p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.latest-project .learn-more-btn {
+    display: inline-block;
+    padding: 12px 24px;
+    background-color: #0ac775;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.latest-project .learn-more-btn:hover {
+    background-color: #08a65a;
+    transform: scale(1.05);
+}
+
+.latest-project .about-section:hover .image-container1 {
+    transform: scale(1.05);
+}
+
+.latest-project .about-section::before {
+    content: '';
+    position: absolute;
+    top: -50px;
+    right: -50px;
+    background: rgba(255, 255, 255, 0.1);
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    z-index: 0;
+}
+
+
+@media (max-width: 1024px) {
+    .latest-project .about-section {
+        padding: 40px 20px;
+    }
+
+    .latest-project .text-container h1 {
+        font-size: 36px;
+    }
+
+    .latest-project .text-container p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 768px) {
+    .latest-project .about-section {
+        flex-direction: column;
+        text-align: center;
+        padding: 20px;
+    }
+
+    .latest-project .image-container1 {
+        max-width: 100%;
+        border-radius: 20px 20px 0 0;
+    }
+
+    .latest-project .text-container {
+        border-radius: 0 0 20px 20px;
+        padding: 20px;
+    }
+
+    .latest-project .text-container h1 {
+        font-size: 28px;
+    }
+
+    .latest-project .text-container p {
+        font-size: 14px;
+    }
+
+    .latest-project .learn-more-btn {
+        padding: 10px 20px;
+    }
+}
+
+@media (max-width: 480px) {
+    .latest-project .about-section {
+        padding: 10px;
+    }
+
+    .latest-project .text-container h1 {
+        font-size: 24px;
+    }
+
+    .latest-project .text-container p {
+        font-size: 12px;
+    }
+
+    .latest-project .learn-more-btn {
+        padding: 8px 16px;
+        font-size: 14px;
+    }
+}
+
+@media (max-width: 768px) {
+    header {
+        flex-direction: column;
+        padding: 10px 20px;
+    }
+
+    .nav-links {
+        display: none;
+        flex-direction: column;
+        width: 100%;
+        position: fixed;
+        top: 80px;
+        left: -100%;
+        background: #064f45;
+        transition: all 0.3s ease-in-out;
+    }
+
+    .nav-links.active {
+        left: 0;
+    }
+
+    .nav-links li {
+        margin: 20px 0;
+    }
+
+    .hamburger {
+        display: block;
+    }
+
+    .nav-links a {
+        font-size: 16px;
+        padding: 10px 20px;
+    }
+
+    .hero-section {
+        height: 60vh; 
+        background-size: cover; 
+    }
+
+    .latestProject {
+        height: 60vh; 
+        background-size: cover; 
+        box-shadow: inset 0 0 0 1000px rgba(0, 0, 0, 0.8);
+    }
+
+    .section-title {
+        padding: 30px 0; 
+    }
+
+    .cards {
+        flex-direction: column;
+        gap: 10px;
+        padding: 0 10px;
+    }
+
+    .card,
+    .cardP {
+        width: 80%; 
+        margin: 0 auto; 
+    }
+
+    .card img,
+    .cardP .image-project img {
+        width: 100%;
+    }
+}
+
