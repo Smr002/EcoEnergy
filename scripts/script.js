@@ -11,3 +11,53 @@ document.querySelector('.learn-more-btn').addEventListener('click', function(e) 
     e.preventDefault();
     document.querySelector('#target-section').scrollIntoView({ behavior: 'smooth' });
 });
+
+
+const carousel = document.querySelector(".carousel");
+const arrowLeft = document.querySelector(".arrow-left");
+const arrowRight = document.querySelector(".arrow-right");
+const cardWidth = carousel.clientWidth; 
+
+let isDragging = false, startX, scrollLeft;
+
+
+arrowLeft.addEventListener("click", () => {
+    carousel.scrollBy({
+        left: -cardWidth,
+        behavior: 'smooth'
+    });
+});
+
+arrowRight.addEventListener("click", () => {
+    carousel.scrollBy({
+        left: cardWidth,
+        behavior: 'smooth'
+    });
+});
+
+
+carousel.addEventListener("mousedown", (e) => {
+    isDragging = true;
+    startX = e.pageX - carousel.offsetLeft;
+    scrollLeft = carousel.scrollLeft;
+    carousel.classList.add("active");
+});
+
+carousel.addEventListener("mouseleave", () => {
+    isDragging = false;
+    carousel.classList.remove("active");
+});
+
+carousel.addEventListener("mouseup", () => {
+    isDragging = false;
+    carousel.classList.remove("active");
+});
+
+carousel.addEventListener("mousemove", (e) => {
+    if (!isDragging) return;
+    e.preventDefault();
+    const x = e.pageX - carousel.offsetLeft;
+    const walk = (x - startX) * 3; 
+    carousel.scrollLeft = scrollLeft - walk;
+});
+

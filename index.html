@@ -23,7 +23,7 @@
                     </div>
                 </li>
                 <li><a href="#">Our Energy</a></li>
-                <li><a href="#">Blog</a></li>
+                <li><a href="../EcoEnergy/blog.html">Blog</a></li>
                 <li><a href="#">About us</a></li>
                 <li><a href="#">Contact us</a></li>
             </ul>
@@ -33,17 +33,52 @@
                 <div class="bar"></div>
             </div>
         </header>
+        <br><br><br><br><br>
 
         <section class="hero-section">
             <div class="overlay"></div>
             <button class="arrow-left">&lt;</button>
-            <div class="hero-content">
-                <h1>The Real Deal</h1>
-                <p>Save the planet by using renewable energy.</p>
-                <a href="#" class="btn">Read More</a>
+            <div class="carousel">
+                <div class="cardBanner" >
+                    <div class="hero-content">
+                        <h1>The Real Deal</h1>
+                        <p>Save the planet by using renewable energy.</p>
+                        <a href="#" class="btn">Read More</a>
+                    </div>
+                </div>
+                <div class="cardBanner">
+                    <div class="hero-content">
+                        <h1>Another Slide</h1>
+                        <p>Discover the benefits of solar power.</p>
+                        <a href="#" class="btn">Learn More</a>
+                    </div>
+                </div>
+                <div class="cardBanner">
+                    <div class="hero-content">
+                        <h1>Another Slide</h1>
+                        <p>Discover the benefits of solar power.</p>
+                        <a href="#" class="btn">Learn More</a>
+                    </div>
+                </div>
+                <div class="cardBanner">
+                    <div class="hero-content">
+                        <h1>Another Slide</h1>
+                        <p>Discover the benefits of solar power.</p>
+                        <a href="#" class="btn">Learn More</a>
+                    </div>
+                </div>
+                <div class="cardBanner">
+                    <div class="hero-content">
+                        <h1>Another Slide</h1>
+                        <p>Discover the benefits of solar power.</p>
+                        <a href="#" class="btn">Learn More</a>
+                    </div>
+                </div>
+                
             </div>
             <button class="arrow-right">&gt;</button>
         </section>
+        
         
         <section class="our-energy">
             <div class="section-title">
@@ -192,7 +227,7 @@
             </div>
         </section>
         
-<br>
+	
         <footer class="footer">
             <div class="container">
                <div class="info">
@@ -208,7 +243,7 @@
                 </div>
                 <div class="contact-info">
                     <h2>Find us</h2>
-                    <p>1010 Avenue, SW 54321, Chandigarh</p>
+                    <p>Tirana</p>
                     <h2>Call us</h2>
                     <p>9876543210</p>
                     <h2>Mail us</h2>
@@ -244,5 +279,43 @@
             </div>
         </footer>
         <script src="../scripts/script.js"></script>
+        <script>
+            const carousel = document.querySelector(".carousel");
+            const arrowLeft = document.querySelector(".arrow-left");
+            const arrowRight = document.querySelector(".arrow-right");
+            const cardWidth = carousel.clientWidth; 
+            
+            let isDragging = false, startX, scrollLeft;
+            
+          
+            arrowLeft.addEventListener("click", () => {
+                carousel.scrollBy({
+                    left: -cardWidth,
+                    behavior: 'smooth'
+                });
+            });
+            
+            arrowRight.addEventListener("click", () => {
+                carousel.scrollBy({
+                    left: cardWidth,
+                    behavior: 'smooth'
+                });
+            }); 
+
+            document.addEventListener('DOMContentLoaded', function() {
+                const hamburger = document.querySelector(".hamburger");
+                const navLinks = document.querySelector(".nav-links");
+            
+                hamburger.addEventListener("click", () => {
+                    navLinks.classList.toggle("active");
+                    hamburger.classList.toggle("active");
+                });
+            });
+            document.querySelector('.learn-more-btn').addEventListener('click', function(e) {
+                e.preventDefault();
+                document.querySelector('#target-section').scrollIntoView({ behavior: 'smooth' });
+            });
+            
+            </script>
     </body>
 </html>
