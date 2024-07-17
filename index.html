@@ -25,11 +25,14 @@
                 <li><a href="#">Our Energy</a></li>
                 <li><a href="../blog.html">Blog</a></li>
                 <li><a href="../about.html">About us</a></li>
-                <li><a href="#">Contact us</a></li>
+                <li><a href="../contact.html">Contact us</a></li>
             </ul>
             <div class="hamburger">
+               
                 <div class="bar"></div>
+             
                 <div class="bar"></div>
+                
                 <div class="bar"></div>
             </div>
         </header>
@@ -302,15 +305,15 @@
                 });
             }); 
 
-            document.addEventListener('DOMContentLoaded', function() {
-                const hamburger = document.querySelector(".hamburger");
-                const navLinks = document.querySelector(".nav-links");
-            
-                hamburger.addEventListener("click", () => {
-                    navLinks.classList.toggle("active");
-                    hamburger.classList.toggle("active");
-                });
-            });
+           document.addEventListener('DOMContentLoaded', function() {
+    const hamburger = document.querySelector(".hamburger");
+    const navLinks = document.querySelector(".nav-links");
+
+    hamburger.addEventListener("click", () => {
+        navLinks.classList.toggle("active");
+        hamburger.classList.toggle("active");
+    });
+});
             
             </script>
     </body>
