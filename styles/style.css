@@ -1053,14 +1053,6 @@ header {
 }
 
 @media (max-width: 768px) {
-    header {
-        flex-direction: column;
-        padding: 5px 5px;
-    }
-    .logo img {
-        height: 100px;
-    }
-
     .hero-section {
         height: 60vh; 
         background-size: cover; 
@@ -1116,6 +1108,7 @@ header {
 @media (max-width: 768px) {
     .hamburger {
         display: flex;
+     
     }
     .nav-links {
         display: none;
@@ -1126,6 +1119,7 @@ header {
         left: 25%;
         background-color: #064f45;
         box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        
     }
     .nav-links.active {
         display: flex;
@@ -1136,6 +1130,23 @@ header {
     }
     .nav-links .dropdown-content {
         position: static;
+    }
+    header {
+        padding: 10px 20px;
+    }
+
+    .logo {
+        flex: 1;
+    }
+
+    .hamburger {
+        padding-right: 7%;
+        justify-content: flex-end;
+        
+    }
+    .bar{
+        margin: 3px;
+        padding: 1px;
     }
 }
 @media (max-width:768px){
