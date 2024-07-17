@@ -943,6 +943,7 @@ header {
 @media (max-width: 1200px) {
     .main-container {
         flex-direction: column;
+        align-items: center;
     }
 }
 
@@ -950,6 +951,7 @@ header {
     .blogger, .more-blogs, .sidebar-section {
         flex: 1 1 100%;
         padding: 10px;
+        justify-content: center;
     }
     
     .search-container {
@@ -967,7 +969,10 @@ header {
 @media (max-width: 768px) {
     .blogger-cards {
         flex-direction: column;
-        align-items: center;
+        justify-content: center;
+    }
+    .main-container{
+        padding: 0px;
     }
 }
 
@@ -979,6 +984,7 @@ header {
     
     .blogger-card {
         width: 90%;
+        justify-content: center;
     }
 }
 
