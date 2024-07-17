@@ -23,8 +23,8 @@
                     </div>
                 </li>
                 <li><a href="#">Our Energy</a></li>
-                <li><a href="#">Blog</a></li>
-                <li><a href="#">About us</a></li>
+                <li><a href="../EcoEnergy/blog.html">Blog</a></li>
+                <li><a href="../EcoEnergy/about.html">About us</a></li>
                 <li><a href="#">Contact us</a></li>
             </ul>
             <div class="hamburger">
@@ -194,29 +194,19 @@
                 <a href="#">Contact</a>
             </div>
         </footer>
-        <script src="../scripts/script.js"></script>
+
         <script>
-            const carousel = document.querySelector(".carousel");
-            const arrowLeft = document.querySelector(".arrow-left");
-            const arrowRight = document.querySelector(".arrow-right");
-            const cardWidth = carousel.clientWidth; 
+            document.addEventListener('DOMContentLoaded', function() {
+                const hamburger = document.querySelector(".hamburger");
+                const navLinks = document.querySelector(".nav-links");
             
-            let isDragging = false, startX, scrollLeft;
-            
-          
-            arrowLeft.addEventListener("click", () => {
-                carousel.scrollBy({
-                    left: -cardWidth,
-                    behavior: 'smooth'
+                hamburger.addEventListener("click", () => {
+                    navLinks.classList.toggle("active");
+                    hamburger.classList.toggle("active");
                 });
             });
-            
-            arrowRight.addEventListener("click", () => {
-                carousel.scrollBy({
-                    left: cardWidth,
-                    behavior: 'smooth'
-                });
-            }); 
+
+  
             </script>
     </body>
 </html>
