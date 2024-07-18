@@ -61,3 +61,15 @@ carousel.addEventListener("mousemove", (e) => {
     carousel.scrollLeft = scrollLeft - walk;
 });
 
+document.addEventListener("DOMContentLoaded", function() {
+    const circles = document.querySelectorAll('.circle-inner');
+
+    circles.forEach(circle => {
+        let percentage = circle.getAttribute('data-percentage');
+        let angle = (percentage / 100) * 360;
+
+        setTimeout(() => {
+            circle.style.transform = `rotate(${angle}deg)`;
+        }, 100);
+    });
+});
