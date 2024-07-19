@@ -1686,18 +1686,7 @@ details {
         justify-content: center;
     }
 }
-@media (max-width: 576px) {
-    .date1 {
-        position: absolute;
-        top: 46%;
-        left: 14.5%;
-        background: green;
-        color: white;
-        padding: 10px 15px;
-        font-size: 14px;
-        z-index: 1;
-    }
-}
+
 
 @media (max-width: 1024px) {
     .latest-project .about-section {
