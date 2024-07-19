@@ -1318,14 +1318,20 @@ header {
     .border {
         flex-direction: column;
         text-align: center;
+        padding: 4%;
+        padding-top: 5%;
+        
     }
 
     .contactServices p {
         margin-bottom: 20px;
+        
+       
     }
     .contact{
         width: 93%;
     }
+ 
 }
 
 
