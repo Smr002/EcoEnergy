@@ -348,6 +348,110 @@ header {
     background: #32CD32;
     margin: 10px auto;
 }
+.footer1{
+    background-color: #1a695e;
+    color: #fff;
+    padding: 40px 0;
+    position: relative;
+    margin-left: -6.5%;
+    margin-right: -6.4%;
+    margin-bottom: -6.5%;
+}
+
+.footer1 .container {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 0 20px;
+}
+
+.footer1 .container div {
+    flex: 1;
+    margin: 10px;
+}
+
+.footer1 .container .contact-info,
+.footer1 .container .useful-links,
+.footer1 .container .subscribe {
+    flex: 1;
+}
+
+.footer1 .container h2 {
+    color: #f1f1f1;
+    margin-bottom: 10px;
+}
+
+.footer1 .container p,
+.footer1 .container a {
+    color: #fff;
+    margin: 5px 0;
+    text-decoration: none;
+}
+
+.footer1 .container a:hover {
+    text-decoration: underline;
+}
+
+.footer1 .social-icons {
+    display: flex;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.footer1 .social-icons a {
+    background-color: white;
+    padding: 10px;
+    border-radius: 50%;
+    color: black;
+    display: inline-block;
+    text-align: center;
+}
+
+.footer1 .social-icons a:hover {
+    background-color: rgb(184, 184, 184);
+}
+
+.footer1 .subscribe input[type="email"] {
+    width: 80%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    margin-top: 10px;
+}
+
+.footer1 .subscribe button {
+    padding: 10px 20px;
+    border: none;
+    background-color: #f1f1f1;
+    color: #fff;
+    border-radius: 5px;
+    cursor: pointer;
+    margin-top: 10px;
+    color: black;
+}
+
+.footer1 .subscribe button:hover {
+    background-color: #f1f1f1;
+}
+
+.footer1-bottom {
+    background-color: #064f45;
+    color: #666;
+    text-align: center;
+    padding: 20px;
+    position: absolute;
+    bottom: 0;
+    width: 97%;
+}
+
+.footer1-bottom a {
+    color: #f1f1f1;
+    text-decoration: none;
+}
+
+.footer1-bottom a:hover {
+    text-decoration: underline;
+}
 
 
 .footer {
@@ -355,6 +459,7 @@ header {
     color: #fff;
     padding: 40px 0;
     position: relative;
+  
 }
 .footer .container {
     display: flex;
@@ -612,8 +717,10 @@ header {
     padding-top: 60%;
     position: relative;
     overflow: hidden;
-    margin: 20px auto;
+    margin: 0 auto;
     border: 5px solid #32CD32;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.8);
+    
 }
 
 .image-container2 img {
@@ -625,14 +732,25 @@ header {
     object-fit: cover;
 }
 
+
 .date {
     position: absolute;
     top: 10px;
-    left: 10px;
+    left: 15px;
     background: green;
     color: white;
     padding: 10px 15px;
     font-size: 14px;
+}
+.date1 {
+    position: absolute;
+    top: 52%;
+    left: 16%;
+    background: green;
+    color: white;
+    padding: 10px 15px;
+    font-size: 14px;
+    z-index: 1;
 }
 
 .content {
@@ -1286,12 +1404,72 @@ header {
     padding-left: 6.5%;
     padding-right: 10.5%;
 }
+.acc{
+    width: 100%;
+}
+details {
+    margin: 5px;
+    font-size: 18px;
+   
+  }
+  details > * {
+    padding: .75rem;
+  }
+  details > div {
+    background: #ddd;
+    border-radius: 0 0 5px 5px;
+  }
+  summary {
+    border-radius: 5px;
+    font-size: 20px;
+    font-family: sans-serif;
+    font-weight: bold;
+    color: #fff;
+    background: #064f45;
+    cursor: pointer;
+    position: relative;
+    transition: .3s;
+    text-indent: 0px;
+  }
+  summary::marker {
+    content: "";
+  }
+  summary::before {
+    content:"";
+    position:absolute;
+    inset: .75rem;
+    left: auto;
+    aspect-ratio: 1;
+    background: 
+     conic-gradient(from 90deg at 26% 26%, #0000 90deg, #fff 0) 
+      100% 100%/58% 58%;
+    clip-path: inset(1px);
+    transition: .3s;
+  }
+  details[open] summary::before {
+    transform: rotate(45deg);
+  }
+  details[open] summary {
+    border-radius: 5px 5px 0 0;
+    background: #0B486B;
+    text-indent: 1rem;
+  }
+
+  .bloggerEnergy {
+    flex: 2;
+    padding: 20px;
+
+   
+}
 
 @media(max-width: 786px){
     .map iframe{
         width:100%;
         height: 90%;
        }
+       details {
+        width: 98%;
+      }
 }
 
 @media (max-width: 768px) {
@@ -1417,6 +1595,16 @@ header {
     .facts {
         flex-direction: column;
     }
+    .date1 {
+        position: absolute;
+        top: 43%;
+        left: 14.5%;
+        background: green;
+        color: white;
+        padding: 10px 15px;
+        font-size: 14px;
+        z-index: 1;
+    }
 }
 @media (max-width: 768px) {
     .container {
@@ -1464,6 +1652,26 @@ header {
     }
     .main-container{
         padding: 0px;
+    }
+    .bloggerEnergy {
+        flex-direction: column;
+        justify-content: center;
+        width: 90%;
+    }
+    .date{
+        position: absolute;
+        top: 30px;
+        left: 40px;
+        background: green;
+        color: white;
+        padding: 10px 15px;
+        font-size: 14px;
+    }
+}
+@media (max-width: 786px) {
+    .image-container2 {
+        width: 100%;
+        padding-top: 80%;
     }
 }
 
@@ -1577,6 +1785,20 @@ header {
     }
 
     .footer-bottom {
+        background-color: #064f45;
+        color: #666;
+        text-align: center;
+        padding: 20px;
+        position: absolute;
+        bottom: 0;
+        width: 90%;
+    }
+    .footer1{
+        margin-left: 0%;
+        margin-right: 0%;
+        margin-bottom: 0%;
+    }
+    .footer1-bottom {
         background-color: #064f45;
         color: #666;
         text-align: center;
