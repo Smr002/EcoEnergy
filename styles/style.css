@@ -209,14 +209,22 @@ header {
 .card {
     background: white;
     border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.3);
     text-align: center;
-    padding: 20px;
+    padding: 25px;
     width: 300px;
+    margin-bottom: 1.5%;
+    margin-top: 1%;
     transition: transform 0.3s ease;
 }
 .card:hover {
     transform: translateY(-10px);
+}
+.card:hover .icon{
+    fill: #369c8f; 
+}
+.card:hover h3{
+    color: #369c8f; 
 }
 .card img {
     width: 100%;
@@ -234,6 +242,10 @@ header {
     height: 3px;
     background: #32CD32;
     margin: 10px auto;
+}
+
+h1{
+    font-size: 	xx-large;
 }
 
 .cardP{
@@ -353,9 +365,9 @@ header {
     color: #fff;
     padding: 40px 0;
     position: relative;
-    margin-left: -6.5%;
-    margin-right: -6.4%;
-    margin-bottom: -6.5%;
+    margin-left: -11.5%;
+    margin-right: -11.4%;
+    margin-bottom: -11.5%;
 }
 
 .footer1 .container {
@@ -669,7 +681,7 @@ header {
 .main-container {
     display: flex;
     justify-content: space-between;
-    padding: 70px;
+    padding: 120px;
     flex-wrap: wrap;
 }
 
@@ -744,8 +756,8 @@ header {
 }
 .date1 {
     position: absolute;
-    top: 52%;
-    left: 16%;
+    top: 59%;
+    left: 19%;
     background: green;
     color: white;
     padding: 10px 15px;
@@ -1416,7 +1428,7 @@ details {
     padding: .75rem;
   }
   details > div {
-    background: #ddd;
+    background-color: rgba(255, 246, 246, 0.2);
     border-radius: 0 0 5px 5px;
   }
   summary {
@@ -1771,7 +1783,7 @@ details {
     .cards {
         flex-direction: column;
         gap: 10px;
-        padding: 0 10px;
+        padding: 0 20px;
     }
 
     .card,
