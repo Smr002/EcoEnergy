@@ -923,13 +923,13 @@ header {
 }
 
 .contact {
-    width: 50%;
+    width: 80%;
     padding-top: 2%;
     padding-bottom: 2%;
     background-color: rgba(255, 255, 255, 0.4);
     border-radius: 10px;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    margin-left: 25%;
+    margin: 0 auto;
     padding-left: 1%;
     padding-right: 1%;
     overflow: hidden;
@@ -1108,12 +1108,7 @@ header {
     text-anchor: middle;
     dominant-baseline: middle;
 }
-.contact{
-    flex: 2;
-    padding-left: 10px;
-    padding-right: 10px;
-    margin-right:10%;
-}
+
 .contactUs {
     flex: 1;
     padding-left: 10px;
@@ -1287,6 +1282,10 @@ header {
     color: #34495e;
     margin-bottom: 10px;
 }
+.contactServices{
+    padding-left: 6.5%;
+    padding-right: 10.5%;
+}
 
 @media(max-width: 786px){
     .map iframe{
@@ -1323,6 +1322,9 @@ header {
 
     .contactServices p {
         margin-bottom: 20px;
+    }
+    .contact{
+        width: 93%;
     }
 }
 
