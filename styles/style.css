@@ -1108,12 +1108,20 @@ header {
     text-anchor: middle;
     dominant-baseline: middle;
 }
-.contactServices {
-    padding: 20px;
+.contact{
+    flex: 2;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-right:10%;
+}
+.contactUs {
+    flex: 1;
+    padding-left: 10px;
+    padding-right: 10px;
     display: flex;
-    justify-content: center;
     align-items: center;
-    margin-top: 20px; 
+    justify-content: center;
+    
 }
 
 .border {
@@ -1121,7 +1129,7 @@ header {
     justify-content: space-between;
     align-items: center;
     width: 100%;
-    max-width: 1200px;
+    max-width: 1400px;
     padding: 30px;
     background-color: #356F42; 
 
@@ -1133,6 +1141,11 @@ header {
     margin: 0;
     flex: 1; 
     text-align: left; 
+}
+
+.map iframe{
+ justify-content: center;
+ box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9);
 }
 
 .contactServices button {
@@ -1273,6 +1286,13 @@ header {
     line-height: 1.8;
     color: #34495e;
     margin-bottom: 10px;
+}
+
+@media(max-width: 786px){
+    .map iframe{
+        width:100%;
+        height: 90%;
+       }
 }
 
 @media (max-width: 768px) {
