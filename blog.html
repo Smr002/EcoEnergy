@@ -48,40 +48,40 @@
                 <div class="blogger-cards">
                     <div class="blogger-card">
                         <div class="image-container2">
-                            <img src="image/homeImg.jpg" alt="blogger 1">
+                            <img src="image/biomass.jpg" alt="blogger 1">
                         </div>
                         <div class="date">28 Aug</div>
                         <div class="content">
-                            <h3>Some text</h3>
+                            <h3>Project 1</h3>
                             <div class="underline"></div>
                             <p>Some text</p>
-                            <a href="#" class="read-more">Read More →</a>
+                            <a href="../project.html" class="read-more">Read More →</a>
                         </div>
                     </div>
                 
                     <div class="blogger-card">
                         <div class="image-container2">
-                            <img src="image/homeImg.jpg" alt="blogger 1">
+                            <img src="image/greenEnergy.jpg" alt="blogger 1">
                         </div>
                         <div class="date">28 Aug</div>
                         <div class="content">
-                            <h3>Some text</h3>
+                            <h3>Project 2</h3>
                             <div class="underline"></div>
                             <p>Some text</p>
-                            <a href="#" class="read-more">Read More →</a>
+                            <a href="../project.html" class="read-more">Read More →</a>
                         </div>
                     </div>
                     <br>
                     <div class="blogger-card">
                         <div class="image-container2">
-                            <img src="image/bannerImg.jpg" alt="blogger 1">
+                            <img src="image/solarEnergy.jpg" alt="blogger 1">
                         </div>
                         <div class="date">28 Aug</div>
                         <div class="content">
-                            <h3>Some text</h3>
+                            <h3>Project 3</h3>
                             <div class="underline"></div>
                             <p>Some text</p>
-                            <a href="#" class="read-more">Read More →</a>
+                            <a href="../project.html" class="read-more">Read More →</a>
                         </div>
                     </div>
                 </div>
@@ -180,14 +180,14 @@
                 </div>
                 <div class="subscribe">
                     <h2>Subscribe</h2>
-                    <p>Don't miss to subscribe to our new feeds, kindly fill the form below.</p>
-                    <input type="email" placeholder="Email Address">
-                    <button>Subscribe</button>
+                    <input type="email" placeholder="Email Address" id="submitEmail" onsubmit="return validateForm()">
+                    <button  type="submit">Subscribe</button>
+           
                 </div>
             </div><br>
             <br><br><br>
             <div class="footer-bottom">
-                <p>&copy; 2024, All Right Reserved <a href="#">Samara</a></p>
+                <p>&copy; 2024, All Right Reserved <a href="https://www.linkedin.com/in/kristi-samara-a6a408294/">Samara</a></p>
                 <a href="#">Home</a> | 
                 <a href="#">Terms</a> | 
                 <a href="#">Privacy</a> | 
@@ -208,6 +208,20 @@
             });
 
   
+            </script>
+            <script>
+                function validateForm() {
+                    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+                    const submitEmail = document.getElementById('submitEmail').value;
+                 
+                    if (!emailPattern.test(submitEmail)) {
+                        alert('Please enter a valid email address.');
+                        return false;
+                    }
+                
+            
+                    return true;
+                }
             </script>
     </body>
 </html>

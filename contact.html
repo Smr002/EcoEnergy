@@ -47,15 +47,16 @@
             <div class="backgroundContact"></div>
             
             <section class="contactUs" >
-                <input type="text" name="Name" id="Name" placeholder="Your Name">
-                <input type="text" name="Surname" id="Surname" placeholder="Your Surname">
-                <input type="email" name="Email" id="Email" placeholder="Your Email">
-                <input type="tel" name="PhoneNumber" id="PhoneNumber" placeholder="Your Phone Number">
-                <textarea name="Message" id="Message" placeholder="Your Message for Us"></textarea>
+                <form action="#" method="post" onsubmit="return validateForm()">
+                <input type="text" name="Name" id="Name" placeholder="Your Name" required>
+                <input type="text" name="Surname" id="Surname" placeholder="Your Surname" required>
+                <input type="email" name="Email" id="Email" placeholder="Your Email" required>
+                <input type="tel" name="PhoneNumber" id="PhoneNumber" placeholder="Your Phone Number" required>
+                <textarea name="Message" id="Message" placeholder="Your Message for Us" required></textarea>
                 <button type="submit">SEND</button>
-              
+            </form>
             </section>
-
+      
         </div>
 <br>
         <section class="map" > 
@@ -102,13 +103,13 @@
                 <div class="subscribe">
                     <h2>Subscribe</h2>
                     <p>Don't miss to subscribe to our new feeds, kindly fill the form below.</p>
-                    <input type="email" placeholder="Email Address">
-                    <button>Subscribe</button>
+                    <input type="email" placeholder="Email Address" id="submitEmail" onsubmit="return validateForm()">
+                    <button  type="submit">Subscribe</button>
                 </div>
             </div><br>
             <br><br><br>
             <div class="footer-bottom">
-                <p>&copy; 2024, All Right Reserved <a href="#">Samara</a></p>
+                <p>&copy; 2024, All Right Reserved <a href="https://www.linkedin.com/in/kristi-samara-a6a408294/">Samara</a></p>
                 <a href="#">Home</a> | 
                 <a href="#">Terms</a> | 
                 <a href="#">Privacy</a> | 
@@ -129,6 +130,45 @@
             });
 
   
+            </script>
+
+            <script>
+                function validateForm() {
+                    const emailPattern = /^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$/;
+                    const phonePattern = /^\+?[1-9]\d{1,14}$/;
+                    const namePattern = /^[a-zA-Z\s]+$/;
+                    
+                    const email = document.getElementById('Email').value;
+                    const contactNumber = document.getElementById('PhoneNumber').value;
+                    const firstName = document.getElementById('Name').value;
+                    const lastName = document.getElementById('Surname').value;
+                    const submitEmail = document.getElementById('submitEmail').value;
+                    if(!namePattern.test(firstName)){
+                        alert('Please enter a valid name');
+                        return false;
+                    }
+                    if(!namePattern.test(lastName)){
+                        alert('Please enter a valid name like:"+355691111111"');
+                        return false;
+                    }
+                    if (!emailPattern.test(email)) {
+                        alert('Please enter a valid email address.');
+                        return false;
+                    }
+        
+                    if (!phonePattern.test(contactNumber)) {
+                        alert('Please enter a valid phone number.');
+                        return false;
+                    }
+
+                    if (!emailPattern.test(submitEmail)) {
+                        alert('Please enter a valid email address.');
+                        return false;
+                    }
+                
+        
+                    return true;
+                }
             </script>
     </body>
 </html>
