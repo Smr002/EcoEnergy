@@ -17,6 +17,7 @@ header {
 
 .logo img {
     height: 110px;
+    padding-left: 10%;
 }
 
 .nav-links {
@@ -2025,10 +2026,11 @@ h4 {
 
     .logo {
         flex: 1;
+        margin-left: -10%;
     }
 
     .hamburger {
-        padding-right: 10%;
+        padding-right: 12%;
         justify-content: flex-end;
         
     }
