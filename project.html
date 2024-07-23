@@ -7,6 +7,7 @@
     <link rel="icon" type="image/png" href="image/icon2.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <link href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 </head>
 <style>
     html {
@@ -61,25 +62,25 @@
                 <p>We Are solar the simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry’s standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make...</p>
             </div>
         </div>
-        <div class="related-projects">
+        <div class="related-projects" data-aos="fade-up">
             <h3>RELATED PROJECTS</h3>
-            <div class="projects">
-                <div class="project-item">
+            <div class="projects" data-aos="fade-up">
+                <div class="project-item" data-aos="fade-up">
                     <img src="image/biomass.jpg" alt="Related Project 1">
                     <h4>Swedish Mega Project</h4>
                     <p>DESIGN - INTERIOR - OFFICE</p>
                 </div>
-                <div class="project-item">
+                <div class="project-item" data-aos="fade-up">
                     <img src="image/biomass.jpg" alt="Related Project 2">
                     <h4>So to deliberately render</h4>
                     <p>DESIGN - INTERIOR - OFFICE</p>
                 </div>
-                <div class="project-item">
+                <div class="project-item" data-aos="fade-up">
                     <img src="image/biomass.jpg" alt="Related Project 3">
                     <h4>Frozen Trees In A Lake</h4>
                     <p>DESIGN - INTERIOR - OFFICE</p>
                 </div>
-                <div class="project-item">
+                <div class="project-item" data-aos="fade-up">
                     <img src="image/biomass.jpg" alt="Related Project 4">
                     <h4>Consectetur adipiscing</h4>
                     <p>DESIGN - INTERIOR - OFFICE</p>
@@ -139,7 +140,12 @@
         <a href="#">Contact</a>
     </div>
 </footer>
-
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+      AOS.init();
+    });
+  </script>
 <script>
     document.addEventListener('DOMContentLoaded', function() {
         const hamburger = document.querySelector(".hamburger");
@@ -167,6 +173,27 @@
             return true;
         }
     </script>
+    <script>
+                
+                
+                
+        const logo = document.querySelector('.footer .container .logo img');
+        if (logo) {
+            logo.addEventListener('click', () => {
+                window.location.href = "../index.html";
+    
+            });
+        }
+    
+        const logo1 = document.querySelector('.logo img');
+        if (logo1) {
+            logo1.addEventListener('click', () => {
+                window.location.href = "../index.html";
+    
+            });
+        }
+    
+</script>
 </body>
 </html>
 

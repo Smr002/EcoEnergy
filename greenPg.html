@@ -66,7 +66,7 @@
                     <li><a href="#bioMass">What is Hydro Energy</a></li>
                     <li><a href="#currentScenario">History of Hydro Energy</a></li>
                     <li><a href="#potential">The Science Behind Hydro Energy</a></li>
-                    <li><a href="#technologies">Comparing >Hydro Energy with Other Renewable Energy Sources</a></li>
+                    <li><a href="#technologies">Comparing Hydro Energy with Other Renewable Energy Sources</a></li>
                     <li><a href="#source">Source</a></li>
                 </ul>
             </div>
@@ -75,7 +75,7 @@
 
         <section class="acc">
             <div class="accordion">
-                <details>
+                <details id="bioMass">
                     <summary>What is Hydro Energy?</summary>
                     <div>Hydro energy harnesses the power of water in motion—such as water flowing over a waterfall—to generate electricity.
 
@@ -83,7 +83,7 @@
                         
                         Large-scale hydroelectric power plants and smaller projects, such as micro-hydro systems, all contribute to the global energy mix.</div>
                 </details>
-                <details>
+                <details id="currentScenario">
                     <summary>History of Hydro Energy</summary>
                     <div>The use of water for mechanical power dates back to ancient civilizations. Early uses included water wheels for grinding grain and other agricultural purposes.
 
@@ -92,7 +92,7 @@
                         Today, hydro energy contributes a significant portion of global electricity production and plays a crucial role in the renewable energy landscape.
                     </div>
                 </details>
-                <details>
+                <details id="potential">
                     <summary>The Science Behind Hydro Energy</summary>
                     <div>The use of water for mechanical power dates back to ancient civilizations. Early uses included water wheels for grinding grain and other agricultural purposes.
 
@@ -100,8 +100,8 @@
                         
                         Today, hydro energy contributes a significant portion of global electricity production and plays a crucial role in the renewable energy landscape.</div>
                 </details>
-                <details>
-                    <summary>Comparing >Hydro Energy with Other Renewable Energy Sources</summary>
+                <details id="technologies">
+                    <summary>Comparing Hydro Energy with Others</summary>
                     <div>Efficiency and Reliability
                         Hydro energy is highly efficient, with conversion rates often exceeding 90%. This is significantly higher than solar energy, which typically has an efficiency range of 15-20%.
                         
@@ -222,6 +222,27 @@
 
         return true;
     }
+</script>
+<script>
+                
+                
+                
+    const logo = document.querySelector('.footer .container .logo img');
+    if (logo) {
+        logo.addEventListener('click', () => {
+            window.location.href = "../index.html";
+
+        });
+    }
+
+    const logo1 = document.querySelector('.logo img');
+    if (logo1) {
+        logo1.addEventListener('click', () => {
+            window.location.href = "../index.html";
+
+        });
+    }
+
 </script>
 </body>
 </html>

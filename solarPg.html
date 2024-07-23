@@ -75,13 +75,13 @@
 
         <section class="acc">
             <div class="accordion">
-                <details>
+                <details id="bioMass">
                     <summary>What is 170W Solar Panel?</summary>
                     <div>A 170W solar panel is a photovoltaic (PV) panel that converts sunlight into electrical energy, with a maximum power output of 170 watts.
 
                         These panels are often used in residential, commercial, and portable solar energy systems. Their size and efficiency make them ideal for various applications, from rooftop installations to powering RVs and boats.</div>
                 </details>
-                <details>
+                <details id="currentScenario">
                     <summary>Key Features of a 170W Solar Panely</summary>
                     <div>High Efficiency: Modern 170W solar-panels boast high conversion efficiencies, typically ranging from 18% to 22%. This means they can convert a significant portion of sunlight into usable electricity.
                         Durability: These panels are built to withstand harsh weather conditions, including heavy rain, snow, and high winds. They are often equipped with a sturdy aluminum frame and tempered glass to protect the solar cells.
@@ -90,8 +90,8 @@
                         
                     </div>
                 </details>
-                <details>
-                    <summary>SunPower Flexible Solar Panels 170W: A Versatile Solution</summary>
+                <details id="potential">
+                    <summary>SunPower Flexible Solar Panels 170W...</summary>
                     <div>For those seeking flexibility and efficiency, SunPower flexible solar panels 170W are an excellent choice.
 
                         These panels combine the high performance of traditional SunPower panels with the added advantage of flexibility, making them ideal for a wide range of applications.
@@ -100,7 +100,7 @@
                         
                         Their lightweight and bendable design allows for easy installation without the need for heavy mounting equipment. This versatility ensures that you can harness solar energy in virtually any setting, enhancing both convenience and sustainability.</div>
                 </details>
-                <details>
+                <details id="technologies">
                     <summary>Applications of a 170W Solar Panel</summary>
                     <div>Residential Use: Powers small appliances, charges batteries, and contributes to overall household energy needs when installed on rooftops.
                     Commercial Use: Powers equipment and lighting, providing reliable energy in remote locations and reducing the need for generators.
@@ -204,6 +204,27 @@ Emergency Use: Provides essential power for communication devices, medical equip
 
         return true;
     }
+</script>
+<script>
+                
+                
+                
+    const logo = document.querySelector('.footer .container .logo img');
+    if (logo) {
+        logo.addEventListener('click', () => {
+            window.location.href = "../index.html";
+
+        });
+    }
+
+    const logo1 = document.querySelector('.logo img');
+    if (logo1) {
+        logo1.addEventListener('click', () => {
+            window.location.href = "../index.html";
+
+        });
+    }
+
 </script>
 </body>
 </html>

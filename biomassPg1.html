@@ -48,6 +48,7 @@
             <p>Biomass Energy in Pakistan: Unlocking the Potential for Sustainable Development</p>
         </div>
     </section>
+
     <div class="main-container">
         <section class="bloggerEnergy">
            
@@ -75,25 +76,25 @@
 
         <section class="acc">
             <div class="accordion">
-                <details>
+                <details id="bioMass">
                     <summary>What is Bio mass?</summary>
                     <div>Biomass energy is derived from organic materials such as wood, crop waste, and animal manure. It is a renewable source of energy that can be used to generate electricity, produce heat, and create biofuels. This type of energy harnesses the natural process of photosynthesis, converting carbon dioxide and sunlight into usable fuel.</div>
                 </details>
-                <details>
+                <details id="currentScenario">
                     <summary>The Current Energy Scenario?</summary>
                     <div>Pakistan, with its rapidly growing population and escalating energy demands, 
                         faces significant challenges in securing sustainable energy sources. The country relies heavily on fossil fuels, which are not only finite but also have adverse environmental impacts. Exploring alternative energy sources, such as biomass, can help diversify Pakistan's energy portfolio and reduce its carbon footprint.
                     </div>
                 </details>
-                <details>
+                <details id="potential">
                     <summary>The Potential of Biomass Energy?</summary>
                     <div>The potential for biomass energy in Pakistan is vast, given its agricultural economy. Agricultural residues, livestock manure, and organic waste can all be converted into valuable energy resources. Developing biomass energy projects can provide a reliable source of power, especially for rural areas, and contribute to economic development.</div>
                 </details>
-                <details>
+                <details id="technologies">
                     <summary>Biomass Energy Technologies?</summary>
                     <div>Biomass energy technologies include direct combustion, anaerobic digestion, and pyrolysis. Direct combustion involves burning biomass directly to produce heat. Anaerobic digestion breaks down organic material in the absence of oxygen to produce biogas, which can be used for heating and electricity. Pyrolysis converts biomass into liquid biofuels and biochar through thermal decomposition.</div>
                 </details>
-                <details>
+                <details id="technologies">
                     <summary>The Potential of Biomass Energy?</summary>
                     <div>The potential for biomass energy in Pakistan is vast, given its agricultural economy. Agricultural residues, livestock manure, and organic waste can all be converted into valuable energy resources. Developing biomass energy projects can provide a reliable source of power, especially for rural areas, and contribute to economic development.</div>
                 </details>
@@ -193,6 +194,27 @@
 
         return true;
     }
+</script>
+<script>
+                
+                
+                
+    const logo = document.querySelector('.footer .container .logo img');
+    if (logo) {
+        logo.addEventListener('click', () => {
+            window.location.href = "../index.html";
+
+        });
+    }
+
+    const logo1 = document.querySelector('.logo img');
+    if (logo1) {
+        logo1.addEventListener('click', () => {
+            window.location.href = "../index.html";
+
+        });
+    }
+
 </script>
 </body>
 </html>
