@@ -57,6 +57,7 @@ header {
     min-width: 160px;
     box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
     z-index: 1;
+    margin-top: 5%;
 }
 
 .nav-links .dropdown-content a {
@@ -2023,6 +2024,7 @@ h4 {
     }
     .nav-links .dropdown-content {
         position: static;
+        
     }
     header {
         padding: 10px 20px;
