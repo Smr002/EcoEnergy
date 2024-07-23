@@ -553,7 +553,7 @@ h1{
 }
 .footer-bottom {
     background-color: #064f45;
-    color: #666;
+    color: #A4B2BC;
     text-align: center;
     padding: 20px;
     position: absolute;
@@ -691,6 +691,7 @@ h1{
 .content p {
     font-size: 20px; 
     margin: 10px 0;
+   
 }
 .main-container {
     display: flex;
@@ -791,7 +792,7 @@ h1{
 }
 
 .content p {
-    color: #666;
+    color: #A4B2BC;
     margin: 10px 0;
 }
 
@@ -901,7 +902,7 @@ h1{
 .text-content h3 {
     font-size: 1.5em;
     margin-bottom: 20px;
-    color: #c0c0c0;
+    color: #A4B2BC;
 }
 .why-choose-us {
     margin-top: 30px;
@@ -1967,7 +1968,7 @@ h4 {
 
     .footer-bottom {
         background-color: #064f45;
-        color: #666;
+        color: #A4B2BC;
         text-align: center;
         padding: 20px;
         position: absolute;
@@ -1981,7 +1982,7 @@ h4 {
     }
     .footer1-bottom {
         background-color: #064f45;
-        color: #666;
+        color: #A4B2BC;
         text-align: center;
         padding: 20px;
         position: absolute;
