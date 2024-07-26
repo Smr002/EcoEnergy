@@ -391,6 +391,7 @@ h1{
     margin-left: -11.5%;
     margin-right: -11.4%;
     margin-bottom: -11.5%;
+    width: 123%;
 }
 
 .footer1 .container {
@@ -2043,6 +2044,7 @@ h4 {
         margin-left: 0%;
         margin-right: 0%;
         margin-bottom: 0%;
+        width: 100%;
     }
     .footer1-bottom {
         background-color: #064f45;
